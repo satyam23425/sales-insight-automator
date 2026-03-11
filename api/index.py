@@ -1,3 +1,11 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Sales Insight Automator Running on Vercel"}
+
 @app.get("/insights")
 def insights():
     return {
