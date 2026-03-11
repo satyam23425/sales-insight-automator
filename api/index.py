@@ -6,11 +6,10 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Sales Insight Automator Running"}
+    return {"message": "Sales Insight Automator Running on Vercel"}
 
 @app.get("/insights")
 def insights():
-
     df = load_sales_data()
 
     return {
