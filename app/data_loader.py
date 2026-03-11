@@ -2,7 +2,13 @@ import pandas as pd
 import os
 
 def load_sales_data():
+    # Get root project directory
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    file_path = os.path.join(base_dir, "data", "sales.csv")
-    df = pd.read_csv(file_path)
+
+    # CSV file location
+    csv_path = os.path.join(base_dir, "data", "sales.csv")
+
+    # Load data
+    df = pd.read_csv(csv_path)
+
     return df
