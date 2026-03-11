@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sales Insights</title>
+</head>
+
+<body>
+
+<h1>Sales Dashboard</h1>
+
+<button onclick="getInsights()">Load Insights</button>
+
+<pre id="output"></pre>
+
+<script>
+
+async function getInsights(){
+
+let res = await fetch("http://localhost:8000/insights")
+
+let data = await res.json()
+
+document.getElementById("output").innerText =
+JSON.stringify(data,null,2)
+
+}
+
+</script>
+
+</body>
+</html>
